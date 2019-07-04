@@ -1,35 +1,108 @@
 #include <Morse.h>
+Morse::Morse(int _pin)
 
-Morse morse(13);
-char MORSE[][4] = {
-  {'.', '-', '*', '*'},
-  {'-', '.', '.', '.'}, 
-  {'-', '.', '-', '.'}, 
-  {'-', '.', '.', '*'}, 
-  {'.', '*', '*', '*'}, 
-  {'.', '.', '-', '.'}, 
-  {'-', '-', '.', '*'}, 
-  {'.', '.', '.', '.'}, 
-  {'.', '.', '*', '*'}, 
-  {'.', '-', '-', '-'}, 
-  {'-', '.', '-', '*'}, 
-  {'.', '-', '.', '.'}, 
-  {'-', '-', '*', '*'}, 
-  {'-', '.', '*', '*'}, 
-  {'-', '-', '-', '*'}, 
-  {'.', '-', '-', '.'}, 
-  {'-', '-', '.', '-'}, 
-  {'.', '-', '.', '*'}, 
-  {'.', '.', '.', '*'}, 
-  {'-', '*', '*', '*'}, 
-  {'.', '.', '-', '*'}, 
-  {'.', '.', '.', '-'}, 
-  {'.', '-', '-', '*'}, 
-  {'-', '.', '.', '-'}, 
-  {'-', '.', '-', '-'}, 
-  {'-', '-', '.', '.'}  
+{
+
+    pinMode(_pin, OUTPUT);
+
+    _codePin = _pin;
+
 }
 
+
+void Morse::dot()
+
+{
+
+    digitalWrite(_codePin, HIGH);
+
+    delay(250);
+
+    digitalWrite(_codePin, LOW);
+
+    delay(250);
+
+}
+
+
+void Morse::dash()
+
+{
+
+    digitalWrite(_codePin, HIGH);
+
+    delay(1000);
+
+    digitalWrite(_codePin, LOW);
+
+    delay(250);
+
+}
+
+
+
+void Morse::transfor(char _code)
+
+{
+
+    switch (_code) {
+
+        case 'A':
+
+        case 'a':
+
+            dot();
+
+            dash();
+
+            break;
+
+        case 'B':
+
+        case 'b':
+
+            dash();
+
+            dot();
+
+            dot();
+
+            dot();
+
+            break;
+
+        case 'S':
+
+        case 's':
+
+            dot();
+
+            dot();
+
+            dot();
+
+            break;
+
+        case 'o':
+
+        case 'O':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+
+        default:
+
+            break;
+
+    }
+
+}
+Morse morse(13);
 void setup()
 {
   Serial.begin(9600);
