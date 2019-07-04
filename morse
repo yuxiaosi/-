@@ -1,6 +1,5 @@
 #include <Morse.h>
 Morse::Morse(int _pin)
-
 {
 
     pinMode(_pin, OUTPUT);
@@ -47,8 +46,6 @@ void Morse::transfor(char _code)
 
     switch (_code) {
 
-        case 'A':
-
         case 'a':
 
             dot();
@@ -56,8 +53,6 @@ void Morse::transfor(char _code)
             dash();
 
             break;
-
-        case 'B':
 
         case 'b':
 
@@ -70,9 +65,120 @@ void Morse::transfor(char _code)
             dot();
 
             break;
+         case 'c':
 
-        case 'S':
+            dot();
 
+            dash();
+
+            break;
+         case 'd':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'e':
+
+            dot();
+
+            dash();
+
+            break;
+          case 'f':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'g':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'h':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'i':
+
+            dot();
+
+            dash();
+
+            break;
+        case 'j':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'k':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'l':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'm':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'n':
+
+            dot();
+
+            dash();
+
+            break;
+          case 'o':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+         case 'p':
+
+            dot();
+
+            dash();
+
+            break;
+          case 'q':
+
+            dot();
+
+            dash();
+
+            break;
+         case 'r':
+
+            dot();
+
+            dash();
+
+            break;
         case 's':
 
             dot();
@@ -82,10 +188,7 @@ void Morse::transfor(char _code)
             dot();
 
             break;
-
-        case 'o':
-
-        case 'O':
+          case 't':
 
             dash();
 
@@ -94,6 +197,62 @@ void Morse::transfor(char _code)
             dash();
 
             break;
+            case 'u':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+            case 'v':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+            case 'w':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+            case 'x':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+            case 'y':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+            case 'z':
+
+            dash();
+
+            dash();
+
+            dash();
+
+            break;
+
+        
 
         default:
 
