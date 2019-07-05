@@ -1,4 +1,15 @@
-#include <Morse.h>
+#ifndef _MORSE_H
+#define _MORSE_H
+class Morse
+{
+  public:
+    Morse(int pin);
+    void dot();
+    void dash();
+  private:
+    int _pin;
+};
+#endif /*_MORSE_H*/
 Morse::Morse(int _pin)
 {
 
@@ -37,229 +48,144 @@ void Morse::dash()
     delay(250);
 
 }
-
-
-
 void Morse::transfor(char _code)
-
 {
-
-    switch (_code) {
-
+  switch (_code) 
+  {
         case 'a':
-
             dot();
-
             dash();
-
             break;
-
         case 'b':
-
             dash();
-
             dot();
-
             dot();
-
             dot();
-
             break;
-         case 'c':
-
+        case 'c':
+            dash();
             dot();
-
             dash();
-
+            dot()
             break;
-         case 'd':
-
+        case 'd':
+            dash();
             dot();
-
-            dash();
-
+            dot();
             break;
-         case 'e':
-
+        case 'e':
             dot();
-
-            dash();
-
             break;
-          case 'f':
-
+        case 'f':
             dot();
-
+            dot();
             dash();
-
+            dot();
             break;
-         case 'g':
-
-            dot();
-
+        case 'g':
             dash();
-
+            dash();
+            dot();
             break;
-         case 'h':
-
+        case 'h':
             dot();
-
-            dash();
-
+            dot();
+            dot();
+            dot();
             break;
-         case 'i':
-
+        case 'i':
             dot();
-
-            dash();
-
+            dot();
             break;
         case 'j':
-
             dot();
-
             dash();
-
+            dash();
+            dash();
             break;
-         case 'k':
-
+        case 'k':
+            dash();
             dot();
-
             dash();
-
             break;
-         case 'l':
-
+        case 'l':
             dot();
-
             dash();
-
+            dot();
+            dot();
             break;
-         case 'm':
-
+        case 'm':
+            dash();
+            dash();
+            break;
+        case 'n':
+            dash();
             dot();
-
-            dash();
-
             break;
-         case 'n':
-
+        case 'o':
+            dash();
+            dash();
+            dash();
+            break;
+        case 'p':
             dot();
-
             dash();
-
+            dash();
+            dot();
             break;
-          case 'o':
-
-            dash();
-
-            dash();
-
-            dash();
-
-            break;
-         case 'p':
-
+        case 'q':
+            dash();
+            dash();
             dot();
-
             dash();
-
             break;
-          case 'q':
-
+        case 'r':
             dot();
-
             dash();
-
+            dot();
             break;
-         case 'r':
-
+        case 's':
             dot();
-
-            dash();
-
-            break;
-        case 's':
-
             dot();
-
             dot();
-
+            break;
+        case 't':
+            dash();
+            break;
+        case 'u':
             dot();
-
+            dot();
+            dash();
             break;
-          case 't':
-
+        case 'v':
+            dot();
+            dot();
+            dot();
             dash();
-
-            dash();
-
-            dash();
-
             break;
-            case 'u':
-
+        case 'w':
+            dot();
             dash();
-
             dash();
-
-            dash();
-
             break;
-            case 'v':
-
+        case 'x':
             dash();
-
+            dot();
+            dot();
             dash();
-
-            dash();
-
             break;
-            case 'w':
-
+        case 'y':
             dash();
-
+            dot();
             dash();
-
-            dash();
-
+            dash();
             break;
-            case 'x':
-
+        case 'z':
             dash();
-
             dash();
-
-            dash();
-
-            break;
-            case 'y':
-
-            dash();
-
-            dash();
-
-            dash();
-
-            break;
-            case 'z':
-
-            dash();
-
-            dash();
-
-            dash();
-
-            break;
-
-        
-
-        default:
-
-            break;
-
-    }
-
+            dot();
+            dot();
+            break;}
 }
 Morse morse(13);
 void setup()
